@@ -14,7 +14,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'xolox/vim-misc'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'

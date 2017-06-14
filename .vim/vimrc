@@ -1,5 +1,4 @@
 source ~/.vim/plugs.vim
-source ~/.vim/freebsd.vim
 
 let mapleader = ","
 set nocompatible
