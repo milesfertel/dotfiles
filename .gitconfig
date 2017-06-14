@@ -28,3 +28,6 @@
   remote = origin
   merge = refs/heads/master
 
+[user]
+	name = Miles Fertel
+	email = milesfertel@college.harvard.edu
