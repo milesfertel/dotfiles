@@ -31,3 +31,5 @@
 [user]
 	name = Miles Fertel
 	email = milesfertel@college.harvard.edu
+[core]
+	editor = /usr/bin/vim

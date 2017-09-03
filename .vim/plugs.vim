@@ -26,5 +26,4 @@ Plug 'vim-scripts/a.vim'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/Command-T'
 Plug 'szw/vim-tags'
-Plug 'Valloric/YouCompleteMe'
 call plug#end()

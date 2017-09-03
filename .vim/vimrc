@@ -1,6 +1,6 @@
 source ~/.vim/plugs.vim
 
-let mapleader = "\<Space>"
+let mapleader = ","
 set nocompatible
 set nomodeline
 set viminfo='1000,f1,:1000,/1000
@@ -151,10 +151,10 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 
 "------  Window Navigation  ------
 " <Leader>hljk = Move between windows
-nnoremap <Leader>h <C-w>h
-nnoremap <Leader>l <C-w>l
-nnoremap <Leader>j <C-w>j
-nnoremap <Leader>k <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 
 "<Leader>= = Normalize window widths
 nnoremap <Leader>= :wincmd =<CR>
@@ -163,9 +163,9 @@ nnoremap <Leader>= :wincmd =<CR>
 "------  Buffer Navigation  ------
 " Ctrl Left/h & Right/l cycle between buffers
 noremap <silent> <C-left> :bprev<CR>
-noremap <silent> <C-h> :bprev<CR>
+noremap <silent> <Leader>h :bprev<CR>
 noremap <silent> <C-right> :bnext<CR>
-noremap <silent> <C-l> :bnext<CR>
+noremap <silent> <Leader>l :bnext<CR>
 
 " <Leader>q Closes the current buffer
 nnoremap <silent> <Leader>q :Bclose<CR>
@@ -273,11 +273,24 @@ let g:airline#extensions#tabline#left_alt_sep = ' '
 "------  Text File Settings  ------
 :autocmd! BufNewFile,BufRead *.txt,*.md,*.tex set wrap
 
-let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
-let g:ycm_register_as_syntastic_checker=0
-
 set laststatus=2
+
+:function! ReverseBackground()
+: let Mysyn=&syntax
+: if &bg=="light"
+: se bg=dark
+: colorscheme miles
+: else
+: se bg=light
+: colorscheme camo
+: endif
+: syn on
+: exe "set syntax=" . Mysyn
+": echo "now syntax is "&syntax
+:endfunction
+:command! Invbg call ReverseBackground()
+:noremap <Leader>I :Invbg<CR>
+
 "------  GUI Options  ------
 if has("gui_running")
 	" Hides toolbar and scrollbars and File menu
