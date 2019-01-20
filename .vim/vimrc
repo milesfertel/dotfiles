@@ -136,6 +136,10 @@ command! Wq wq
 command! Q q
 cabbrev W w
 
+" Quick Esc
+:imap jk <Esc>
+:imap kj <Esc>
+
 " You gon' learn today
 map <up> <nop>
 map <down> <nop>

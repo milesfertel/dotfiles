@@ -25,5 +25,8 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'vim-scripts/a.vim'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/Command-T'
+Plug 'lervag/vimtex'
 Plug 'szw/vim-tags'
+Plug 'qpkorr/vim-renamer'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
