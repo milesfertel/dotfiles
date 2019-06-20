@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'alvan/vim-closetag'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'rbgrouleff/bclose.vim'
